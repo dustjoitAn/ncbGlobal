@@ -26,9 +26,8 @@ public class RecursiveSum {
 	}
 
 	static long getSum(long number) {
-		long sum = 0;
 		if (number == 0) {
-			return sum;
+			return number;
 		}
 		return number + getSum(--number);
 	}
