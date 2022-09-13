@@ -7,12 +7,12 @@ import org.junit.jupiter.api.TestInstance;
 import java.util.NoSuchElementException;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class MainTest {
+class DuplicateCharactersTest {
 
 	@Test
 	void findMinAndMax() {
 		int[] array = {8, -1};
-		int[] minAndMax = Main.getFirstAndLastValues(array);
+		int[] minAndMax = MinAndMax.getFirstAndLastValues(array);
 		Assertions.assertEquals(8, minAndMax[0]);
 		Assertions.assertEquals(-1, minAndMax[minAndMax.length - 1]);
 	}
@@ -20,13 +20,13 @@ class MainTest {
 	@Test
 	void findMinAndMaxExceptionCase() {
 		int[] array = {};
-		Assertions.assertThrows(NoSuchElementException.class, () -> Main.getFirstAndLastValues(array));
+		Assertions.assertThrows(NoSuchElementException.class, () -> MinAndMax.getFirstAndLastValues(array));
 	}
 
 	@Test
 	void sort() {
 		int[] array = {8, -1};
-		int[] minAndMax = Main.sort(array);
+		int[] minAndMax = MinAndMax.sort(array);
 		Assertions.assertEquals(-1, minAndMax[0]);
 		Assertions.assertEquals(8, minAndMax[minAndMax.length - 1]);
 	}

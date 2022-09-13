@@ -1,12 +1,14 @@
 package task2;
 
+import util.Enums;
+
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-public class Main {
+public class MinAndMax {
 
 	public static void main(String[] args) {
 		int[] array = { -98, 0, -100, 8000 };
@@ -15,11 +17,11 @@ public class Main {
 		try {
 			minAndMax = getFirstAndLastValues(array);
 			if (minAndMax.length == 2)
-				System.out.println("Minimum: " + minAndMax[0] + ", Maximum: " + minAndMax[1]);
+				System.out.println(Enums.MINIMUM.getMessage() + minAndMax[0] + ", " + Enums.MAXIMUM.getMessage() + minAndMax[1]);
 			else
-				System.out.println("Minimum and  Maximum: " + minAndMax[0]);
+				System.out.println(Enums.MIN_AND_MAX.getMessage() + minAndMax[0]);
 		} catch (Exception e) {
-			System.out.println("Please provide a good data.");
+			System.out.println(Enums.WRONG_DATA);
 		}
 	}
 

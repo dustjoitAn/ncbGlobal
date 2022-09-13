@@ -1,25 +1,27 @@
 package task1;
 
+import util.Enums;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class Main {
+public class DuplicateCharacters {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		while (!"0".equals(input)) {
-			System.out.println("(For exiting please enter 0)\nPlease input the expression in which you want to find duplicates: ");
+			System.out.println(Enums.EXITING_MESSAGE.getMessage() + "\n" + Enums.PROVIDE_INPUT_MESSAGE.getMessage());
 			input = scanner.nextLine();
 			if (!"0".equals(input)) {
 				Set<Character> duplicateCharacters = findDuplicateCharacters(input);
 				if (duplicateCharacters.size() != 0)
-					System.out.println("Here are the duplicate characters in the string you provided: " + duplicateCharacters);
+					System.out.println(Enums.FOUND_DUPLICATES_MESSAGE.getMessage() + duplicateCharacters);
 				else
-					System.out.println("There are no duplicates in the provided expression!");
+					System.out.println(Enums.NO_DUPLICATES_MESSAGE.getMessage());
 			}
 		}
 	}

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.web.client.RestTemplate;
 import task4.model.CountryDto;
-import task4.util.Enums;
+import util.Enums;
 
 import java.util.Comparator;
 import java.util.List;
@@ -14,13 +14,13 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
-public class Main {
+public class ApiCall {
 
 	public static void main(String[] args) {
 		try {
 			getCountries();
 		} catch (Exception e) {
-			System.out.println(Enums.ERROR_MESSAGE.name() + e.getMessage());
+			System.out.println(Enums.ERROR_MESSAGE.getMessage() + e.getMessage());
 		}
 	}
 

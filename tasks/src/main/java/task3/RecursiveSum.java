@@ -1,28 +1,29 @@
 package task3;
 
+import util.Enums;
+
 import java.util.Scanner;
 
-public class Main {
+public class RecursiveSum {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		long input = -1;
 		while (input != 0) {
 			try {
-				System.out.println("(For exiting please enter 0)\nPlease enter the number: ");
+				System.out.println(Enums.EXITING_MESSAGE.getMessage() + "\n" + Enums.ENTER_NUMBER.getMessage());
 				input = scanner.nextLong();
 				if (input < 0) {
 					throw new IllegalArgumentException();
 				}
 				if (input != 0) {
-					System.out.println("Summary of the input is: " + getSum(input));
+					System.out.println(Enums.SUM.getMessage() + getSum(input));
 				}
 			} catch (Exception e) {
-				System.out.println("Please enter valid number!");
+				System.out.println(Enums.WRONG_DATA.getMessage());
 				break;
 			}
 		}
 	}
-
 
 	static long getSum(long number) {
 		long sum = 0;
