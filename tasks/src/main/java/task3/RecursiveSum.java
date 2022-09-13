@@ -10,7 +10,7 @@ public class RecursiveSum {
 		long input = -1;
 		while (input != 0) {
 			try {
-				System.out.println(Enums.EXITING_MESSAGE.getMessage() + "\n" + Enums.ENTER_NUMBER.getMessage());
+				System.out.println(Enums.EXITING.getMessage() + "\n" + Enums.ENTER_NUMBER.getMessage());
 				input = scanner.nextLong();
 				if (input < 0) {
 					throw new IllegalArgumentException();

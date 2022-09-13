@@ -14,14 +14,14 @@ public class DuplicateCharacters {
 		Scanner scanner = new Scanner(System.in);
 		String input = "";
 		while (!"0".equals(input)) {
-			System.out.println(Enums.EXITING_MESSAGE.getMessage() + "\n" + Enums.PROVIDE_INPUT_MESSAGE.getMessage());
+			System.out.println(Enums.EXITING.getMessage() + "\n" + Enums.PROVIDE_INPUT.getMessage());
 			input = scanner.nextLine();
 			if (!"0".equals(input)) {
 				Set<Character> duplicateCharacters = findDuplicateCharacters(input);
 				if (duplicateCharacters.size() != 0)
-					System.out.println(Enums.FOUND_DUPLICATES_MESSAGE.getMessage() + duplicateCharacters);
+					System.out.println(Enums.FOUND_DUPLICATES.getMessage() + duplicateCharacters);
 				else
-					System.out.println(Enums.NO_DUPLICATES_MESSAGE.getMessage());
+					System.out.println(Enums.NO_DUPLICATES.getMessage());
 			}
 		}
 	}

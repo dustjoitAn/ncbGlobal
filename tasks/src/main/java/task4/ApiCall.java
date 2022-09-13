@@ -20,7 +20,7 @@ public class ApiCall {
 		try {
 			getCountries();
 		} catch (Exception e) {
-			System.out.println(Enums.ERROR_MESSAGE.getMessage() + e.getMessage());
+			System.out.println(Enums.ERROR_PROCESS.getMessage() + e.getMessage());
 		}
 	}
 
@@ -46,7 +46,6 @@ public class ApiCall {
 	}
 
 	private static List<CountryDto> getFirstTenCountriesWhichHaveMoreThanOneLanguage(Map<String, List<CountryDto>> countries) {
-
 		return countries.values()
 				.stream()
 				.map(countryDtos -> countryDtos

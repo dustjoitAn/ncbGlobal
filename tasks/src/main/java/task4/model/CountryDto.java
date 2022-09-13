@@ -5,9 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CountryDto implements Serializable {
