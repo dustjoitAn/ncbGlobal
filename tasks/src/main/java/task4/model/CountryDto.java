@@ -51,10 +51,10 @@ public class CountryDto implements Serializable {
 	}
 
 	@Override public String toString() {
-		return "[" +
-				"\"region\":\"" + region + '\"' +
-				"\"population\":\"" + population + '\"' +
-				"\"languages\":\"" + languages + '\"' +
-				']';
+		return "Country{" +
+				"region='" + region + '\'' +
+				", population=" + population +
+				", languages=" + languages +
+				'}';
 	}
 }
