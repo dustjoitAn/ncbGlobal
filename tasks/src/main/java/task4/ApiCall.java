@@ -33,8 +33,7 @@ public class ApiCall {
 
 	private static List<CountryDto> readFromApi() throws JsonProcessingException {
 		String result = new RestTemplate().getForObject(Enums.URL.getMessage(), String.class);
-		return new ObjectMapper().readValue(result, new TypeReference<>() {
-		});
+		return new ObjectMapper().readValue(result, new TypeReference<>() {});
 	}
 
 	private static Map<String, List<CountryDto>> groupByContinent(List<CountryDto> countries) {
@@ -50,9 +49,9 @@ public class ApiCall {
 				.stream()
 				.map(countryDtos -> countryDtos
 						.stream()
-						.limit(10)
 						.filter(countryDto -> (countryDto.getLanguages() != null))
 						.filter(countryDto -> (countryDto.getLanguages().size() > 1))
+						.limit(10)
 						.collect(Collectors.toList()))
 				.collect(Collectors.toList()).stream().flatMap(List::stream).collect(Collectors.toList());
 	}
